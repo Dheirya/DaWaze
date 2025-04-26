@@ -1,0 +1,374 @@
+#gameContainer #checkmark,
+.slide button {
+    background-color: #007a5a;
+    color: #fff;
+    cursor: pointer;
+}
+#endGame,
+#gameContainer #roundBox {
+    left: 50%;
+    max-width: 50vw;
+    padding: 7.5px 10px 10px;
+}
+#endGame,
+.slide {
+    text-align: center;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    perspective: 1500px;
+}
+body,
+button,
+html,
+input,
+textarea {
+    font-family: Raleway, "Lucida Console", Monaco, monospace;
+}
+h2 {
+    font-family: Raleway, "Lucida Console", Monaco, monospace;
+}
+#background,
+#gameContainer,
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+button {
+    padding: 10px;
+    margin-top: 10px;
+}
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 5vh auto 0 10vw;
+    background-color: #ccc;
+    width: calc(80vw - 30px);
+    height: calc(90vh - 15px);
+    max-height: calc(90vh - 15px);
+    border: 2px solid #777;
+    border-radius: 15px;
+    filter: opacity(90%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+.slideLogo {
+    height: 17.5vh;
+    filter: drop-shadow(0px 0px 1px #222);
+    transition: height 0.5s ease-in-out;
+}
+.card,
+.img-card {
+    width: 300px;
+    height: 350px;
+}
+.slideLogo.small {
+    height: 8.75vh;
+    cursor: pointer;
+}
+.card .glow,
+.card::before {
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide button {
+    border: 2px solid #777;
+    border-radius: 7px;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.25;
+    padding: 12px 38px;
+    text-decoration: none;
+    transition: 0.14s ease-out;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slide button:hover {
+    box-shadow: 4px 4px 0 #888;
+    border-bottom: none;
+    border-right: none;
+    transform: translate(calc(-50% + 4px), -4px);
+}
+.slide button:focus-visible {
+    outline-offset: 1px;
+}
+.slide button:active {
+    box-shadow: none;
+    transform: translateX(-50%);
+}
+#start .mainContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+#start .mainContainer div {
+    border: 2px solid #777;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    height: calc(72.5vh - 150px);
+    overflow-y: auto;
+    max-height: calc(72.5vh - 154px);
+}
+#start .mainContainer div h2 {
+    margin-bottom: -5px;
+    margin-top: 5px;
+}
+.mainContainer div hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #777;
+    margin: 1em 0;
+    padding: 0;
+}
+#start .mainContainer div ul {
+    text-align: left;
+}
+#countries .mainContainer,
+#mode .mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: -15px;
+}
+#countries .mainContainer {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#countries .mainContainer div,
+#mode .mainContainer div {
+    border: 2px solid #777;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    height: calc(81.25vh - 209px);
+    overflow-y: auto;
+    max-height: calc(81.25vh - 209px);
+    cursor: pointer;
+    transition: transform 0.14s ease-out;
+
+}
+#countries .mainContainer div {
+    height: calc((81.25vh - 209px) / 2 - 20px);
+    overflow-y: hidden;
+}
+#countries .mainContainer div.active,
+#mode .mainContainer div.active {
+    box-shadow: 0 0 2px #000;
+    transform: translateX(0);
+    border: 3px solid #27667f;
+    cursor: auto;
+}
+#countries .mainContainer div:hover:not(div.active),
+#mode .mainContainer div:hover:not(div.active) {
+    border: 2px solid #666;
+    box-shadow: 5px 5px 0 #888;
+    border-bottom: none;
+    border-right: none;
+    transform: translate(-5px, -5px);
+}
+#gameContainer #roundBox,
+#gameContainer .textBox {
+    border-radius: 15px;
+    position: absolute;
+    z-index: 1;
+    background-color: #eee;
+}
+#mode .mainContainer div h1 {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: -12.5px;
+}
+#mode .mainContainer div h3 {
+    font-weight: 500;
+}
+#mode .mainContainer div p {
+    margin-bottom: 5px;
+}
+#mode .mainContainer div ul {
+    text-align: left;
+    margin-top: 0;
+    margin-left: -10px;
+}
+#mode .mainContainer div img {
+    width: 90%;
+    transform: rotate(180deg) scaleX(-1);
+    margin-top: -10px;
+    filter: drop-shadow(0px 0px 3px #222);
+}
+#countries .mainContainer div img {
+    height: calc(100% - 10px);
+}
+#gameContainer .imgLogo {
+    position: absolute;
+    width: 200px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: opacity(0.8);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    cursor: pointer;
+}
+#gameContainer .textBox {
+    bottom: 5px;
+    left: 5px;
+    filter: opacity(0.8);
+    padding: 10px;
+    max-width: 22.5vw;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+#gameContainer #roundBox,
+.toast {
+    top: 5px;
+    filter: opacity(0.8);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+#gameContainer #roundBox {
+    transform: translateX(-50%);
+    width: 35vw;
+}
+#roundBox #totalPointsContainer {
+    position: absolute;
+    top: 7.5px;
+    right: 5px;
+}
+#roundBox #continueMatchContainer {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+#gameContainer #checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    font-size: 42px;
+    padding: 1.25px 1.25px 10px 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 75%;
+    border: 2px solid #00553f;
+    border-top: none !important;
+    border-right: none !important;
+}
+#gameContainer #checkmark:not(#checkmark.disabled):hover {
+    background-color: #006248;
+}
+#gameContainer #checkmark.disabled {
+    background-color: #777;
+    border: 2px solid #777;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+#gameContainer .textBox hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.toast {
+    padding: 12px 20px;
+    display: inline-block;
+    box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.1), 0 10px 36px -4px rgba(77, 96, 232, 0.3);
+    background: #eee;
+    position: fixed;
+    opacity: 0;
+    transition: 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    border-radius: 5px;
+    max-width: fit-content;
+    z-index: 2147483647;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    color: #000;
+}
+.card,
+.card::before {
+    border-radius: 15px;
+}
+.toast.on {
+    opacity: 1;
+}
+.card {
+    font-weight: 700;
+    text-align: right;
+    color: #181a1a;
+    position: relative;
+    transform-style: preserve-3d;
+    transition-duration: 0.3s;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
+    box-shadow: 0 1px 5px #00000099;
+    cursor: pointer;
+    margin: 5px auto 10px;
+}
+.card:hover {
+    transition-duration: 150ms;
+    box-shadow: 0 5px 20px 5px #00000044;
+}
+.card .glow {
+    position: absolute;
+    top: 0;
+    background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
+}
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: linear-gradient(225deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    opacity: 0.1875;
+    z-index: 1;
+    pointer-events: none;
+    animation: 5s linear infinite rainbow;
+}
+@keyframes rainbow {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+.img-card {
+    border: 5px solid #ffe165;
+    border-radius: 15px;
+}
+#endGame {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background-color: #eee;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    width: 50vw;
+    box-shadow: 0 0 0 1600px rgba(0, 0, 0, 0.65);
+}
+#endGame h1 {
+    font-family: "Press Start 2P", serif;
+    font-size: 2.5vw;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.timerBox {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-size: 30px;
+    padding: 5px !important;
+}
