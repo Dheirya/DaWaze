@@ -98,7 +98,7 @@ async def reasonableCheck(start, end):
 
 @app.get("/image/")
 async def generate_grade_card(points: int = 0, country: int = 0):
-    percent = points / 52500 * 100
+    percent = points / 50000 * 100
     grades = {90: "A", 80: "B", 70: "C", 60: "D"}
     grade = "F"
     country = indexed_PLACENAMES[country]
